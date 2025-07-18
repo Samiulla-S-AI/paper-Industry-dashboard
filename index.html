@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Paper Industry Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>Global Paper Industry Analysis Dashboard</h1>
+            <p class="header-subtitle">Comprehensive analysis of production, recycling, and environmental impact</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="production">Production Analysis</button>
+            <button class="tab-btn" data-tab="recycling">Recycling & Sustainability</button>
+            <button class="tab-btn" data-tab="environmental">Environmental Impact</button>
+            <button class="tab-btn" data-tab="india">India Focus</button>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-panel active">
+                <!-- Summary Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">299.1M</div>
+                        <div class="stat-label">Total Global Production (tons)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24M</div>
+                        <div class="stat-label">India's Consumption (tons)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">58%</div>
+                        <div class="stat-label">Global Recycling Average</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">India's Recycling Rate</div>
+                    </div>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="insights-panel">
+                    <h3>Key Insights</h3>
+                    <div class="insight-grid">
+                        <div class="insight-card">
+                            <h4>Production Dominance</h4>
+                            <p>China leads global production with 99.3M tons, accounting for 33% of worldwide output</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Recycling Gap</h4>
+                            <p>India's recycling rate of 30% is significantly below the global average of 58%</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Environmental Challenge</h4>
+                            <p>Paper mills exceed permitted pollution levels by 3-100x for key pollutants</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Growth Opportunity</h4>
+                            <p>India's per capita consumption (16kg) has huge potential compared to global standards</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview Charts -->
+                <div class="chart-grid">
+                    <div class="chart-container">
+                        <canvas id="overviewProductionChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="overviewRecyclingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Production Analysis Tab -->
+            <div id="production" class="tab-panel">
+                <h2>Global Paper Production Analysis</h2>
+                <div class="production-content">
+                    <div class="chart-container large">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f113d65e75a3259937221d3ba2e78e2c/12658453-65a2-4304-8d0b-71aea6858c5f/9673f377.png" alt="Global Paper Production by Top 10 Countries">
+                    </div>
+                    <div class="production-insights">
+                        <div class="insight-card">
+                            <h4>Top Producers</h4>
+                            <ul>
+                                <li><strong>China:</strong> 99.3M tons (33% of global production)</li>
+                                <li><strong>United States:</strong> 75.1M tons (25% of global production)</li>
+                                <li><strong>Japan:</strong> 26.6M tons (9% of global production)</li>
+                                <li><strong>Germany:</strong> 22.7M tons (8% of global production)</li>
+                            </ul>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Production Trends</h4>
+                            <p>Asia-Pacific region dominates global production, with China, Japan, and India contributing significantly to the total output. European countries like Germany and Finland maintain strong positions despite smaller market sizes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recycling & Sustainability Tab -->
+            <div id="recycling" class="tab-panel">
+                <h2>Recycling & Sustainability Analysis</h2>
+                <div class="recycling-content">
+                    <div class="chart-container large">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f113d65e75a3259937221d3ba2e78e2c/38d0dd15-a683-4922-9a45-1967c7a25c71/45a5bfb7.png" alt="Paper Recycling Recovery Rates by Country">
+                    </div>
+                    <div class="sustainability-metrics">
+                        <div class="metric-card">
+                            <h4>Environmental Benefits per Ton Recycled</h4>
+                            <div class="metric-item">
+                                <span class="metric-number">17</span>
+                                <span class="metric-label">Trees Saved</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-number">31,780</span>
+                                <span class="metric-label">Liters of Water Saved</span>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Recycling Leaders</h4>
+                            <p>Nordic countries lead in recycling rates with Finland achieving 100% recovery. Germany and Japan also demonstrate strong sustainability practices with rates above 80%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental Impact Tab -->
+            <div id="environmental" class="tab-panel">
+                <h2>Environmental Impact Analysis</h2>
+                <div class="environmental-content">
+                    <div class="chart-container large">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f113d65e75a3259937221d3ba2e78e2c/d1291153-5601-4e20-b00a-21c8f6654955/347ebb9b.png" alt="Paper Mill Pollution Levels">
+                    </div>
+                    <div class="pollution-insights">
+                        <div class="insight-card">
+                            <h4>Critical Pollution Violations</h4>
+                            <ul>
+                                <li><strong>Chlorinated Compounds:</strong> 100x above permitted levels</li>
+                                <li><strong>BOD:</strong> 7.5x above permitted levels</li>
+                                <li><strong>TSS:</strong> 7.6x above permitted levels</li>
+                                <li><strong>COD:</strong> 3.7x above permitted levels</li>
+                            </ul>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Environmental Challenges</h4>
+                            <p>Paper mills consistently exceed environmental standards across multiple pollutants. Chlorinated compounds show the most severe violations, highlighting the need for improved treatment technologies and stricter enforcement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- India Focus Tab -->
+            <div id="india" class="tab-panel">
+                <h2>India's Paper Industry Focus</h2>
+                <div class="india-content">
+                    <div class="chart-grid">
+                        <div class="chart-container">
+                            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f113d65e75a3259937221d3ba2e78e2c/32b0aeb8-d0da-46f1-9e81-e0167cbb7c2e/0b158b1c.png" alt="India's Paper Consumption Trends">
+                        </div>
+                        <div class="chart-container">
+                            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f113d65e75a3259937221d3ba2e78e2c/01d22b4f-4896-4eb1-ba24-6fd147364aa7/d9b32231.png" alt="India's Education Sector Paper Usage">
+                        </div>
+                    </div>
+                    <div class="india-insights">
+                        <div class="insight-card">
+                            <h4>Consumption Growth</h4>
+                            <p>India's paper consumption has grown from 10.11M tons in 2011 to 24M tons in 2024, representing a 137% increase over 13 years.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Education Sector Impact</h4>
+                            <p>Colleges and universities consume the largest share of paper in education (50.5%), followed by primary schools (31.4%). Total education sector usage exceeds 2.3M tons annually.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Recycling Challenge</h4>
+                            <p>Despite consumption growth, India's recycling rate remains stagnant at 30%, creating significant environmental and economic challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

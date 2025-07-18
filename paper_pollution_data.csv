@@ -1,0 +1,7 @@
+Pollutant_Type,Typical_Levels_mg_L,Permitted_Levels_mg_L,Violation_Factor
+BOD,225.0,30.0,7.5
+COD,932.0,250.0,3.7
+TSS,756.0,100.0,7.6
+Phenols,0.2,0.05,4.0
+Mercury,0.015,0.01,1.5
+Chlorinated_Compounds,100.0,1.0,100.0
